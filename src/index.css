@@ -1,0 +1,114 @@
+@import "tailwindcss";
+
+:root {
+  font-family: "Inter", system-ui, -apple-system, sans-serif;
+  color: #1f2937;
+  background-color: #fbf7f2;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background-color: #fbf7f2;
+}
+
+button {
+  font-family: inherit;
+}
+
+@layer components {
+  .nav-btn {
+    @apply flex h-11 w-11 items-center justify-center rounded-full text-slate-400 hover:bg-slate-800/70;
+  }
+  .nav-active {
+    @apply text-white shadow-lg shadow-orange-500/40;
+    background: linear-gradient(90deg, #f59e0b 0%, #f97316 100%);
+  }
+  .btn-calc {
+    @apply rounded-lg border px-2 py-1 text-center text-sm hover:bg-slate-100;
+  }
+  .udh-card {
+    @apply rounded-2xl bg-white shadow-md shadow-black/5;
+  }
+  .udh-input {
+    @apply w-full rounded-xl border border-slate-200 bg-slate-50 px-3 py-2 text-sm text-slate-700 placeholder:text-slate-400 focus:border-orange-400 focus:outline-none focus:ring-2 focus:ring-orange-200;
+  }
+  .udh-select {
+    @apply w-full rounded-xl border border-slate-200 bg-slate-50 px-3 py-2 text-sm text-slate-700 focus:border-orange-400 focus:outline-none focus:ring-2 focus:ring-orange-200;
+  }
+  .udh-btn-primary {
+    @apply rounded-xl bg-gradient-to-r from-[#f59e0b] to-[#f97316] px-4 py-2 text-sm font-semibold text-white shadow-md shadow-orange-500/40;
+  }
+  .udh-btn-ghost {
+    @apply rounded-xl border border-slate-200 bg-white px-4 py-2 text-sm text-slate-600 hover:bg-slate-50;
+  }
+  .udh-btn-blue {
+    @apply rounded-xl bg-blue-600 px-4 py-2 text-sm font-semibold text-white shadow-md shadow-blue-500/30;
+  }
+  .udh-error {
+    @apply rounded-lg border border-orange-300 bg-orange-50 px-3 py-2 text-sm text-orange-700;
+  }
+  .udh-spinner {
+    @apply h-4 w-4 animate-spin rounded-full border-2 border-white/60 border-t-white;
+  }
+  .udh-filter {
+    @apply w-full rounded-xl border border-slate-200 bg-white px-3 py-2 text-xs text-slate-600 shadow-sm placeholder:text-slate-300;
+  }
+  .udh-table {
+    @apply w-full text-sm;
+  }
+  .udh-table thead {
+    @apply text-left text-[11px] uppercase tracking-wide text-slate-400;
+  }
+  .udh-table tbody tr {
+    @apply border-t;
+  }
+  .udh-fab {
+    @apply fixed bottom-6 right-6 z-40 flex h-12 w-12 items-center justify-center rounded-full bg-orange-500 text-white shadow-lg shadow-orange-500/40;
+  }
+  .udh-toggle {
+    @apply relative inline-flex h-5 w-10 items-center rounded-full bg-slate-200 transition;
+  }
+  .udh-toggle[data-on="true"] {
+    @apply bg-orange-500;
+  }
+  .udh-toggle span {
+    @apply inline-block h-4 w-4 translate-x-1 rounded-full bg-white transition;
+  }
+  .udh-toggle[data-on="true"] span {
+    @apply translate-x-5;
+  }
+  .udh-auth-card {
+    @apply w-full max-w-md rounded-[28px] bg-white p-8 shadow-2xl shadow-orange-500/20;
+  }
+  .udh-auth-input {
+    @apply w-full rounded-xl border border-slate-200 bg-slate-50 px-3 py-2 text-sm text-slate-700 placeholder:text-slate-400;
+  }
+  .udh-auth-btn {
+    @apply rounded-xl bg-gradient-to-r from-[#f59e0b] to-[#f97316] py-3 text-sm font-semibold text-white shadow-lg shadow-orange-500/30;
+  }
+  .udh-pill {
+    @apply rounded-xl border border-slate-200 bg-white px-3 py-2 text-xs text-slate-500 shadow-sm;
+  }
+  .udh-section-title {
+    @apply text-lg font-semibold text-slate-800;
+  }
+  .udh-subtitle {
+    @apply text-sm font-semibold text-slate-700;
+  }
+  .udh-muted {
+    @apply text-xs text-slate-400;
+  }
+  .udh-report-card {
+    @apply rounded-2xl bg-white p-5 text-left shadow-md shadow-black/5 border-2 border-transparent;
+  }
+  .udh-report-card[data-tone="orange"] {
+    @apply border-orange-300;
+  }
+  .udh-report-card[data-tone="blue"] {
+    @apply border-blue-300;
+  }
+  .udh-report-card[data-tone="green"] {
+    @apply border-emerald-300;
+  }
+}
