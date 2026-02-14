@@ -1,5 +1,5 @@
 import { createContext, useCallback, useContext, useEffect, useMemo, useState } from "react";
-import { apiGet, apiPost, apiPut, apiDelete, setToken } from "../api/client";
+import { apiGet, apiPost, setToken } from "../api/client";
 import type {
   CatalogItem,
   PassRequest,
